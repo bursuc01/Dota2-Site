@@ -1,0 +1,31 @@
+<div class="container">
+    <form #loginForm="ngForm" class="login-container" (ngSubmit)="login(loginForm)">
+      <h2 class="form-signin-heading">Login</h2>
+        <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username or password.</div>
+        
+        <label for="username" class="sr-only">Username</label>
+        <input type="email" id="username" name="username" [(ngModel)]="credentials.name" 
+          class="form-control" placeholder="User Name" required>
+   
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="credentials.email" 
+          class="form-control" placeholder="Email" required>
+
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" name="password" [(ngModel)]="credentials.password" 
+          class="form-control" placeholder="Password" required>
+        
+        <button class="login-button" type="submit" [disabled]="!loginForm.valid">Log in</button>
+    </form>
+    <div>
+      Don't have an account? Register
+      <a routerLink="/register" class="route-link">
+        Here
+      </a>
+    </div>
+    
+</div>
+
+<div class="image-container">
+  <img class="background-image" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//home/heroes_full.jpg" alt="photo">
+</div>

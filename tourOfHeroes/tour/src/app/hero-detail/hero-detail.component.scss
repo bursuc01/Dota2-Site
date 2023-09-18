@@ -1,0 +1,204 @@
+@use "../app-attributes" as var;
+
+.big-container{
+
+    .power-details{
+        font-size: 40px;
+    }
+
+    .powers{
+        padding-top: 5%;
+        padding-right:5%;
+        color: var.$textColor;
+        font-family: var.$textFont;
+        align-items: center;
+        
+        .power-header-body{
+            margin-top: 40px;
+            padding-left: 5%;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .power-backstory{
+            padding-left: 5%;
+            font-size: 20px;
+        }
+
+        .power-video-description{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 10px;
+            padding-top: 3%;
+
+            
+            .power-video{
+                width: 100%;
+            }
+
+            .power-description{
+                width: 100%;
+                padding: 8px;
+                background-color: #121212;
+                display: flex;
+                flex-direction: row;
+                
+                .dontevenknow{
+                    .power-name{
+                        font-size: 25px;
+                    }
+                }
+
+                .attribute-description{
+                    width: 5%;
+                }
+            }
+        }
+    }
+
+    .details-container{
+        position: relative;
+        padding-top: 10%;
+        padding-left: 5%;
+        color: var.$textColor;
+        display: flex;
+
+        .detail-name{
+            margin-top: 30px;
+            color: #959595;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 17px;
+        }
+
+        .hero-description{
+
+            .hero-attribute{
+                display: flex;
+                justify-content: space-around;
+                margin-left: -20%;
+                
+                .add-button{
+                    border: none;
+                    background-color: transparent;
+                    color: #a5e0f3;
+                    font-size: 23px;
+                    font-family: var.$textFont;
+                    margin-left: -200%;
+
+                    &:hover{
+                        transform: scale(1.1);  
+                        cursor: pointer;
+                    }
+                }
+
+                .hero-attribute-lower{
+                    display: flex;
+
+                    .attribute-name{
+                        font-size: 25px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+
+            .hero-name{
+                margin-top: 12px;
+                font-family: var.$textFont;
+                line-height: 110%;
+                font-size: 80px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            .hero-power{
+                font-size: 18px;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: #a5e0f3;
+                margin-top: 5px;
+            }
+            .hero-backstory{
+                font-size: 25px;
+                padding-top: 2%;
+                width: 40%;
+                flex-grow: 1;
+                font-family: var.$textFont;
+                position: relative;
+            }
+
+        }
+        .hero-video{
+            width: 110%;
+            max-height: 500px;
+            max-width: 1500px;
+            padding-right: 10%;
+        }
+
+    }
+
+    .lower-details{
+        width: 100%;
+        height: 30%;
+        min-height: 101px;
+        background: linear-gradient(80deg, #252728 0%, #101415 100%);
+        border-top: 2px solid #282828;
+        border-bottom: 2px solid #2c2e2e;
+        box-shadow: 0px 0px 8px #000;
+        display: flex;
+        justify-content: space-around;
+        z-index: 2;
+
+        .roles{
+            color: var.$textColor;
+            font-family: var.$textFont;
+            font-size:larger;
+
+            .role-details{
+                display: flex;
+
+                .role-row{
+                    padding-right: 20%;
+                }
+            }
+        }
+
+        .stats-name{
+                font-size: 30px;
+                align-self: center;
+            }
+    
+        .stats{
+            display: flex;
+            flex-direction: column;
+            color: var.$textColor;
+            font-family: var.$textFont;
+
+            .stats-details{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .attack{
+                    width: 30%;
+                    height: 100%;
+                    min-height: 0;
+                    display: flex;
+                    flex-direction: column;
+                    
+                }
+            }
+
+            .stats-name{
+                font-size: 30px;
+                align-self: center;
+            }
+        }
+    }
+}

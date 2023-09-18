@@ -1,0 +1,21 @@
+/* general variables */
+$backgroundColor: #185774;
+$primaryColor: #185774;
+$textColor: rgb(231, 221, 221);
+$textFont: "Reaver",serif;;
+$navColor: #262829;
+$hoverColor: darken($backgroundColor, 10%);
+
+/* dashboard.component variables */
+$linkHoverColorDashboard: #000;
+$linkWidth: 100%;
+$linkMinWidth: 70px;
+$linkMargin: 0.5rem auto;
+
+/* heroes.component variables */
+$secondaryColor: #333;
+$linkHoverColorHeroes: #ffffff;
+$deleteButtonColor: #525252;
+
+/* hero-search.component variables */
+$borderColor: gray;

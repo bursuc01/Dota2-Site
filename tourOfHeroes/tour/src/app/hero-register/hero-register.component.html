@@ -1,0 +1,27 @@
+<div>
+    <h1>ADD A HERO</h1>
+    <label for="new-hero">Hero name: </label>
+    <input id="new-hero" #heroName />
+  
+    <label for="new-hero">Hero power: </label>
+    <input id="new-hero" #heroPower />
+  
+    <label for="new-hero">Hero backstory: </label>
+    <input id="new-hero" #heroBackstory />
+
+    <label for="new-hero">Hero photo url: </label>
+    <input id="new-hero" #heroPhotoUrl />
+  
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="button" class="add-button" 
+    (click)="add(heroName.value, heroPower.value, heroBackstory.value, heroPhotoUrl.value)">
+      Add hero
+    </button>
+
+    <button type="button" class="add-button">
+        <a routerLink="/heroes" class = "route-link">
+            Back 
+        </a> 
+    </button>
+  </div>
+  

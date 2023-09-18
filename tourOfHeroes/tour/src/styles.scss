@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png");
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image repetition */
+    background-attachment: fixed;
+}

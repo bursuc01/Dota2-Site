@@ -1,0 +1,67 @@
+// Reset some default styles
+@use '../app-attributes' as var;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  // Style for the container
+  div {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    // Style for headings
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    // Style for labels
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    // Style for input fields
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    
+    // Style for buttons
+    .add-button {
+      display: flex;
+      justify-content: center;
+      padding: 10px 15px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 3px;
+      background-color: var.$backgroundColor;
+      color: var.$textColor;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover{
+        background-color: var.$hoverColor;
+      }
+      
+      .route-link{
+        text-decoration: none;
+        color: var.$textColor;
+      }
+    }
+
+    
+  }
+  

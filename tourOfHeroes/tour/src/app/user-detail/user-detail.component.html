@@ -1,0 +1,31 @@
+<div class = "all-details">
+    <div class="user-details">
+        <h2>User Details</h2>
+        
+        <!-- Container for user details -->
+        <div class="user-info">
+            <div class="info-label">Name:</div>
+            <div class="info-value">{{loggedUser.name}}</div>
+        </div>
+        <div class="user-info">
+            <div class="info-label">Email:</div>
+            <div class="info-value">{{loggedUser.email}}</div>
+        </div>
+    </div>
+
+    <div class="u-heroes">
+        <div *ngFor="let hero of heroes" class="hero-item">
+            <div >
+              <a routerLink="/herodetail/{{hero.id}}">
+                <img class="actual-hero-image" [src]="hero.photoUrl" alt="{{ hero.name }}" (click)="onSelect(hero)">
+              </a>
+            </div>
+            <div class="hero-name">
+              <a routerLink="/herodetail/{{hero.id}}" class = "hero-name">
+                <b>{{hero.name}}</b>
+              </a>
+              <button class="remove-button" type="button" (click)="deleteHeroFromUser(hero)">Remove Hero</button>
+            </div>
+        </div>
+    </div>
+</div>

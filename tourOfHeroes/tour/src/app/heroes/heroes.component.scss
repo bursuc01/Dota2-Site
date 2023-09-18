@@ -1,0 +1,93 @@
+@use '../app-attributes' as var;
+
+.hero-container{
+  position: relative;
+  z-index: 9;
+  padding-left: 2%;
+  padding-right: 5%;;
+  padding-top: 10%;
+  color: var.$textColor;
+  font-family: "Reaver",serif;
+
+  .filter{
+    display: flex;
+
+    .attributes{
+      font-size: 17px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-right: 20px;
+      margin-top: 20px;
+      padding-left: 5%;
+      
+      .picture{
+        height: 34px;
+        margin-left: -4px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition-property: filter;
+        transition-timing-function: ease-in-out;
+        transition-duration: .1s;
+        cursor: pointer;
+        color: #fff;
+        filter: brightness(0.5) saturate(0);
+
+        &:hover{
+          transform: scale(1.1);
+          cursor: pointer;
+        }
+      }
+    } 
+  } 
+  .compendium{
+    font-size: 60px;
+    font-family: "Reaver",serif;
+  }
+
+  .hero-list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    
+    .hero-item:hover .hero-name {
+      display: block !important;
+    } 
+
+    .hero-item{
+      padding: 10px;
+      margin-top: 40px;
+      transition: transform 0.3s ease-in-out;
+      
+      .hero-name{
+        font-size: 20px;
+        position: absolute;
+        z-index: 4;
+        display: none;
+      }
+      
+      .actual-hero-image{
+        position: relative;
+        z-index: 3;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+
+        // &:hover +.hero-name{
+        //   display:block !important;
+        // }
+      }
+      
+
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+a{
+  text-decoration: none;
+  color: var.$textColor;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+}

@@ -1,0 +1,63 @@
+@use '../app-attributes' as var;
+.overlap-grid{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+
+    .background-video{
+        
+        position: absolute;
+        z-index: 1; /* Place the video below the navbar */
+        grid-column: 1;
+        grid-row: 1;
+
+        video {
+            position: relative;
+            top: -45px;
+            width: 100% !important;
+            height: 150% !important;
+            opacity: 0.4;
+        }
+        
+    }   
+}
+
+.homepage{
+    position: relative;
+    z-index: 5;
+    width: 100vw;
+    height: 100%;
+    width: fit-content;
+    max-width: 60%;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+    pointer-events: auto;
+    grid-column: 1;
+    grid-row: 1;
+    .review{
+
+        .description-big-text{
+            font-size: 60px;
+            line-height: 113%;
+            font-family: "Reaver",serif;
+            letter-spacing: 5px;
+            font-weight: 600;
+            color: var.$textColor;
+            text-transform: uppercase;
+            text-shadow: 0px 0px 20px #000;
+        }
+
+        .descriptor-text{
+            font-size: 20px;
+            font-family: "Reaver",serif;
+            letter-spacing: 5px;
+            color: rgb(161, 156, 156);
+        }
+    }
+
+    
+} 
+

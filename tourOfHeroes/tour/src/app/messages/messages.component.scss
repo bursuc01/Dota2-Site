@@ -1,0 +1,22 @@
+@use '../app-attributes' as var;
+
+.clear{
+    display: flex;
+      justify-content: center;
+      padding: 10px 15px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 3px;
+      background-color: var.$backgroundColor;
+      color: var.$textColor;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover{
+        background-color: var.$hoverColor;
+      }
+}
+
+div{
+    color: var.$textColor;
+}

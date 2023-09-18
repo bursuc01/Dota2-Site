@@ -1,0 +1,39 @@
+<div class ="main-container">
+  <nav class="navbar">
+      <div>
+        <a routerLink="/" class="route-link"> {{title}} </a>
+      </div>
+        <a routerLink="/heroes" class="route-link">
+          Heroes 
+        </a> 
+        <div *ngIf="isUserAuthenticated();">
+          <a routerLink="/userdetail" class="route-link">
+            User-Detail
+          </a>
+        </div>
+        <div *ngIf="!isUserAuthenticated(); else loggedIn">
+          <a routerLink="/login" class="route-link">
+            Login
+          </a>
+        </div>
+        <ng-template #loggedIn>
+          <a routerLink="" class="route-link" (click)="logOut()">
+            Logout
+          </a>
+        </ng-template>
+  </nav>
+  
+  <div class="align-second-container">
+    <div>
+      
+      <div *ngIf="isUserAuthenticated();">
+      </div>
+
+      <router-outlet></router-outlet>
+      
+      <!-- <app-messages></app-messages> -->
+    </div>
+  </div>
+</div>
+
+

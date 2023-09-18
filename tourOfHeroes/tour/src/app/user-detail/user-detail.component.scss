@@ -1,0 +1,72 @@
+@use '../app-attributes' as var;
+
+.all-details {
+    color: var.$textColor;
+    align-items: center;
+    padding-top: 10%;
+    padding-left: 5%;
+
+    a{
+      text-decoration: none;
+      color: var.$textColor;
+    }
+    
+    .user-details {
+      background-color: #121212;
+      margin-right: 20%;
+      font-size: larger;
+      margin-bottom: 3%;
+      font-family: var.$textFont;
+
+      .user-info {
+        display: flex;
+        margin: 10px 0;
+  
+        .info-label {
+          width: 100px;
+          font-weight: bold;
+        }
+  
+      }
+    }
+
+    .u-heroes {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+    }
+  
+    .hero-item{
+      transition: transform 0.3s ease-in-out;
+      
+      .hero-name{
+        font-size: 20px;
+        z-index: 4;
+      }
+
+      .remove-button{
+        border: none;
+        background-color: transparent;
+        color: var.$textColor;
+        margin-left: 20px;
+        font-family: var.$textFont;
+        font-size: large;
+
+        &:hover{
+          transform: scale(1.1);
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+      
+      .actual-hero-image{
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+      }
+      
+
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+  

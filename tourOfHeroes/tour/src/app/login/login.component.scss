@@ -1,0 +1,55 @@
+@use '../app-attributes' as var;
+
+.image-container{
+  position: absolute;
+  z-index: 1;
+
+  .background-image{
+    width: 100%;
+    height: 10%;
+    opacity: 0.3;
+  }
+}
+
+.container{
+  color: var.$textColor;
+  padding-top: 10%;
+  padding-left: 40%;
+  position: absolute;
+  z-index: 5;
+
+  .login-container{
+    display: grid;
+    margin-right: 70%;
+    
+    .form-signin-heading{
+      font-family: var.$textFont;
+    }
+    
+    .sr-only{
+      font-family: var.$textFont;
+      color: var.$textColor;
+      font-size: 20px;
+    }
+
+    .login-button{
+      border: none;
+      background-color: transparent;
+      color: var.$textColor;
+      padding-top: 20px;
+      font-size: 20px;
+
+      &:hover{
+        transform: scale(1.1);
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    .form-control{
+      border-radius: 5px;
+      height: 25px;
+      border: none;
+    }
+  }
+}

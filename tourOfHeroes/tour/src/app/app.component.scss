@@ -1,0 +1,36 @@
+@use './app-attributes' as var;
+
+a{  
+  text-decoration: none;
+  color: var.$navColor;
+  font-family: var.$textFont;
+}
+
+.main-container{
+  width: 100%;
+  margin: 0;
+
+  .navbar{
+    position: absolute;
+    z-index: 10;
+    background-color: transparent;
+    display: flex;
+    padding-top: 3%;
+
+    .route-link{
+      font-size: 20px;
+      font-family: "Reaver",serif;
+      font-weight: 600;
+      letter-spacing: 3px;
+      opacity: .8;
+      color: var.$textColor;
+      margin: 0px 20px;
+      text-transform: uppercase;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+

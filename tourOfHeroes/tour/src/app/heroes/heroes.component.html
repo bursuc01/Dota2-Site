@@ -1,0 +1,47 @@
+<div class=" hero-container">
+  <div class="compendium">Hero compendium</div>
+  <div class="filter">
+    <div class="attributes">
+      Attributes
+      <button type="button" (click)="handleAttributeClick('strength')">
+        <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/herogrid/filter-str-active.png" alt="strength" class="picture">
+      </button> 
+      <button type="button" (click)="handleAttributeClick('agility')">
+        <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/herogrid/filter-agi-active.png" alt="agility" class="picture">
+      </button>
+      <button type="button" (click)="handleAttributeClick('intelligence')">
+        <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/herogrid/filter-int-active.png" alt="intelligence" class="picture">
+      </button>
+      <button type="button" (click)="handleAttributeClick('universal')">
+        <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/herogrid/filter-uni-active.png" alt="universal" class="picture">
+      </button>
+    </div>
+    <div class="attributes">
+      Complexity
+      <button type="button" (click)="handleComplexityClick('1')">
+        <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/herogrid/filter-diamond.png" alt="complex" class="picture">
+      </button>
+      <button type="button" (click)="handleComplexityClick('2')">
+        <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/herogrid/filter-diamond.png" alt="complex" class="picture">
+      </button>
+      <button type="button" (click)="handleComplexityClick('3')">
+      <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/herogrid/filter-diamond.png" alt="complex" class="picture">
+      </button>  
+    </div>
+  </div>
+  <ul class="hero-list">
+    <div *ngFor="let hero of heroes" class="hero-item">
+        <div class="actual-hero-image">
+          <a routerLink="/herodetail/{{hero.id}}">
+            <img [src]="hero.photoUrl" alt="{{ hero.name }}" (click)="onSelect(hero)">
+          </a>
+        </div>
+          <div class="hero-name">
+          <a routerLink="/herodetail/{{hero.id}}" class = "hero-name">
+            <b>{{hero.name}}</b>
+          </a>
+          
+        </div>
+    </div>
+  </ul>
+</div>

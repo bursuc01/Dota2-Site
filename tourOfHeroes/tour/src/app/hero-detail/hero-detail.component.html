@@ -1,0 +1,143 @@
+<div class="big-container">
+  <div *ngIf="hero" class="details-container">
+      <div class="hero-description">
+        <div class="hero-attribute">
+          
+          <div class="hero-attribute-lower">
+          <img class="attribute-picture" src={{attributeUrl}} alt="complex" class="picture">
+          <div class="attribute-name">{{hero.attribute | uppercase}}</div>
+          </div>
+
+          <div  *ngIf="isUserAuthenticated()">
+            <button type="button" class="add-button" (click)="addHeroToUser()">
+              Add to list
+            </button>
+          </div>
+        </div>
+        <div class="hero-name">{{hero.name | uppercase}}</div>
+        <div class="hero-power">{{hero.power | uppercase}}</div>
+        <div class="hero-backstory">{{hero.backstory }}</div>
+        <div class="detail-name">Attack type:</div>
+        <div class="attack-type">{{hero.attackType | uppercase}}</div>
+          
+        <div class="detail-name">Complexity:</div>
+        {{hero.complexity | uppercase}}
+        
+      </div>
+      <video class="hero-video" poster={{hero.image}} autoplay="" preload="auto" loop="" playsinline="">
+        <source type="video/webm" src={{hero.source}}>
+      </video>
+  </div>
+
+  <div *ngIf="hero" class="lower-details">
+    <img src={{hero.photoUrl}} alt="hero">
+    
+    <div class="roles">
+      <div class="role-details">
+        <div class="role-row">
+          <div class="role-name">Carry:</div>
+          <div class="role-value">{{hero.roles.carry}}</div>
+        
+          <div class="role-name">Support:</div>
+          <div class="role-value">{{hero.roles.support}}</div>
+          
+          <div class="role-name">Nuker:</div>
+          <div class="role-value">{{hero.roles.nuker}}</div>
+        </div>
+        <div class="role-row">
+          <div class="role-name">Disabler:</div>
+          <div class="role-value">{{hero.roles.disabler}}</div>
+        
+          <div class="role-name">Jungler:</div>
+          <div class="role-value">{{hero.roles.jungler}}</div>
+          
+          <div class="role-name">Durable:</div>
+          <div class="role-value">{{hero.roles.durable}}</div>
+        </div>
+        <div class="role-row">
+          <div class="role-name">Escape:</div>
+          <div class="role-value">{{hero.roles.escape}}</div>
+        
+          <div class="role-name">Pusher:</div>
+          <div class="role-value">{{hero.roles.pusher}}</div>
+          
+          <div class="role-name">Initiator:</div>
+          <div class="role-value">{{hero.roles.initiator}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stats-details">
+          <div class="attack">
+            Attack
+            <div class="single-stat">
+              <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//heroes/stats/icon_damage.png">
+              {{hero.stats.attack}}
+            </div>
+            <div class="single-stat">
+              <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//heroes/stats/icon_attack_time.png">
+              {{hero.stats.attackSpeed}}
+            </div>
+            <div class="single-stat">
+              <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//heroes/stats/icon_projectile_speed.png">
+              {{hero.stats.range}}
+            </div>
+          </div>
+          <div class="attack">
+            Defense
+            <div class="single-stat">
+              <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//heroes/stats/icon_armor.png">
+              {{hero.stats.armor}}
+            </div>
+            <div class="single-stat">
+              <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//heroes/stats/icon_magic_resist.png">
+              {{hero.stats.magicResist}}
+            </div>
+          </div>
+          <div class="attack">
+            Mobility
+            <div class="single-stat">
+              <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//heroes/stats/icon_movement_speed.png">
+              {{hero.stats.moveSpeed}}
+            </div>
+            <div class="single-stat">
+              <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//heroes/stats/icon_vision.png">
+              {{hero.stats.visibility}}
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div *ngIf="hero" class="powers">
+    <div class="power-details">
+      Ability details:
+    </div>
+    <div class="power-video-description" *ngFor="let power of hero.powerList">
+      <video class = "power-video" autoplay="" preload="auto" loop="" playsinline="">
+        <source type="video/webm" src={{power.powerVideoUrl}}>
+      </video>
+      <div class="power-header">
+        <div class="power-description">
+          <img class="attribute-picture" src={{power.powerImageUrl}} alt="complex" class="picture">
+          <div class="dontevenknow">
+            <div class="power-name">{{power.powerName}}</div>
+            <div class="power-happen">{{power.powerDescription}}</div>
+          </div>
+        </div>
+        
+        <div class="power-header-body">
+          <p>Ability: {{power.powerType}}</p>
+          <p>Cooldown: {{power.cooldown}}</p>
+        </div>
+        <div class="power-backstory">
+        {{power.backstory}}
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+  
